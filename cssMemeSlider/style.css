@@ -21,6 +21,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 2em;
     max-width: 75em;
     height: 100vh;
     background: #405361;
@@ -32,7 +33,7 @@
     border-radius: 1em;
     width: 100%;
     height: 80%;
-    background: #ab9ca8;
+    background: #405361;
     overflow: hidden;
 }
 
@@ -213,5 +214,11 @@
         margin: 0 auto;
         justify-content: center;
         gap: 0.7em;
+    }
+}
+
+@media only screen and (width >=2880px) {
+    .section {
+        height: fit-content;
     }
 }
