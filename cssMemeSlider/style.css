@@ -121,8 +121,9 @@
     }
 
     .label:hover .point {
-        background: goldenrod;
+        background: #fff;
         transform: scale(1.2);
+        border: #fff;
     }
 }
 
@@ -142,6 +143,16 @@
     background: none;
     cursor: not-allowed;
 }
+#btn1:checked~.dashboard .control .label1:hover .point,
+#btn2:checked~.dashboard .control .label2:hover .point,
+#btn3:checked~.dashboard .control .label3:hover .point,
+#btn4:checked~.dashboard .control .label4:hover .point,
+#btn5:checked~.dashboard .control .label5:hover .point,
+#btn6:checked~.dashboard .control .label6:hover .point,
+#btn7:checked~.dashboard .control .label7:hover .point {
+    border: 0.2em solid #fff;
+}
+
 
 #btn1:checked~.screen .slider {
     transform: translateX(0);
