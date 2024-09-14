@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'Tolkien';
+    src:
+        url('./tolkiencyr.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background: #ab9ca8;
+}
+
+.section {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    max-width: 75em;
+    height: 100vh;
+    background: #405361;
+    padding: 1em;
+}
+
+.screen {
+    padding: 0.5em 0;
+    border-radius: 1em;
+    width: 100%;
+    height: 80%;
+    background: #405361;
+    overflow: hidden;
+}
+
+.slider {
+    width: 700%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.img {
+    border-radius: 0.5em;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.text {
+    font-family: 'Tolkien';
+    font-size: 2em;
+    color: goldenrod;
+    width: 50%;
+    overflow: hidden;
+}
+
+.str {
+    margin: 0;
+    width: 700%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transition: transform 0.7s ease;
+}
+
+.description {
+    width: 100%;
+}
+
+.control {
+    padding: 1em;
+    margin: 0 0 -3em auto;
+    display: flex;
+    gap: 1em;
+}
+
+.radio-btn {
+    display: none;
+}
+
+.circle {
+    background: none;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.point {
+    background: #0ddeea;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    transition: all 0.5s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .label:hover .circle {
+        cursor: pointer;
+    }
+
+    .label:hover .point {
+        background: #fff;
+        transform: scale(1.1);
+        border: #fff;
+    }
+}
+
+.label:active .point {
+    background: green;
+}
+
+#btn1:checked~.dashboard .control .label1 .point,
+#btn2:checked~.dashboard .control .label2 .point,
+#btn3:checked~.dashboard .control .label3 .point,
+#btn4:checked~.dashboard .control .label4 .point,
+#btn5:checked~.dashboard .control .label5 .point,
+#btn6:checked~.dashboard .control .label6 .point,
+#btn7:checked~.dashboard .control .label7 .point {
+    border: 0.2em solid goldenrod;
+    transform: scale(1.2);
+    background: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    #btn1:checked~.dashboard .control .label1:hover .point,
+    #btn2:checked~.dashboard .control .label2:hover .point,
+    #btn3:checked~.dashboard .control .label3:hover .point,
+    #btn4:checked~.dashboard .control .label4:hover .point,
+    #btn5:checked~.dashboard .control .label5:hover .point,
+    #btn6:checked~.dashboard .control .label6:hover .point,
+    #btn7:checked~.dashboard .control .label7:hover .point {
+        border: 0.2em solid #fff;
+    }
+}
+
+#btn1:checked~.screen .slider {
+    transform: translateX(0);
+}
+
+#btn2:checked~.screen .slider {
+    transform: translateX(calc(-100%/7));
+}
+
+#btn3:checked~.screen .slider {
+    transform: translateX(calc(-200%/7));
+}
+
+#btn4:checked~.screen .slider {
+    transform: translateX(calc(-300%/7));
+}
+
+#btn5:checked~.screen .slider {
+    transform: translateX(calc(-400%/7));
+}
+
+#btn6:checked~.screen .slider {
+    transform: translateX(calc(-500%/7));
+}
+
+#btn7:checked~.screen .slider {
+    transform: translateX(calc(-600%/7));
+}
+
+#btn1:checked~.dashboard .text .str {
+    transform: translateX(0);
+}
+
+#btn2:checked~.dashboard .text .str {
+    transform: translateX(calc(-100%/7));
+}
+
+#btn3:checked~.dashboard .text .str {
+    transform: translateX(calc(-200%/7));
+}
+
+#btn4:checked~.dashboard .text .str {
+    transform: translateX(calc(-300%/7));
+}
+
+#btn5:checked~.dashboard .text .str {
+    transform: translateX(calc(-400%/7));
+}
+
+#btn6:checked~.dashboard .text .str {
+    transform: translateX(calc(-500%/7));
+}
+
+#btn7:checked~.dashboard .text .str {
+    transform: translateX(calc(-600%/7));
+}
+
+@media only screen and (width <=768px) {
+    .screen {
+        height: fit-content;
+        padding: 0;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .control {
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        gap: 0.7em;
+    }
+}
+
+@media only screen and (width >=2880px) {
+    .section {
+        height: fit-content;
+    }
+}
